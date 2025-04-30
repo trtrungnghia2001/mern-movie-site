@@ -1,0 +1,15 @@
+:root {
+  --color-text-base: rgb(255, 255, 255);
+  --color-text-secondary-1: rgba(255, 255, 255, 0.5);
+  --color-text-secondary-2: rgba(255, 255, 255, 0.8);
+
+  --color-bg: #424040;
+  --color-bg-container: rgb(21, 20, 20);
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --color-bg-item: rgba(0, 0, 0, 0.3);
+
+  --size-text-base: 0.875rem;
+
+  /* -- */
+}

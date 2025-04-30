@@ -1,0 +1,59 @@
+@import "react-quill-new/dist/quill.snow.css";
+@import "react-quill-new/dist/quill.bubble.css";
+@import "react-quill-new/dist/quill.core.css";
+
+.quill {
+  position: relative;
+  background-color: inherit;
+  color: inherit;
+}
+
+.ql-snow .ql-editor {
+  min-height: 15vh;
+}
+.ql-view {
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: unset !important;
+}
+
+.ql-snow .ql-editor {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.35em;
+  }
+  h1 {
+    font-size: 2.2em !important;
+  }
+  h2 {
+    font-size: 1.8em !important;
+  }
+  h3 {
+    font-size: 1.6em !important;
+  }
+  h4 {
+    font-size: 1.4em !important;
+  }
+  h5 {
+    font-size: 1.2em !important;
+  }
+  h6 {
+    font-size: 1em !important;
+  }
+
+  ul,
+  ol {
+    li {
+      padding: 0 !important;
+    }
+    li:not(:last-child) {
+      margin-bottom: 0.25rem !important;
+    }
+  }
+}

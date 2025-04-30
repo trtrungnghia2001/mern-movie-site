@@ -1,0 +1,12 @@
+.containerClassName {
+  @apply flex flex-wrap gap-2 justify-center text-sm text-white;
+}
+.pageLinkClassName {
+  @apply bg-color-bg-item rounded px-3 py-1.5 hover:bg-black hover:text-blue-500 h-full flex items-center justify-center cursor-pointer;
+}
+.activeLinkClassName {
+  @apply bg-black text-blue-500;
+}
+.disabledLinkClassName {
+  @apply bg-color-bg-item cursor-not-allowed text-gray-500;
+}

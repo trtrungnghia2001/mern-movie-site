@@ -1,0 +1,89 @@
+/* Basic editor styles */
+.ProseMirror:focus {
+  outline: none;
+}
+.tiptap {
+  :first-child {
+    margin-top: 0;
+  }
+
+  /* List styles */
+  ul,
+  ol {
+    padding-left: 1.25rem;
+    li:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+
+  /* Heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.35;
+    text-wrap: pretty;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.85rem;
+  }
+
+  /* Code and preformatted text styles */
+  code {
+    background-color: rgb(229 231 235);
+    border-radius: 0.4rem;
+    color: var(--black);
+    font-size: 0.85rem;
+    padding: 0.25em 0.3em;
+  }
+
+  pre {
+    background: var(--black);
+    border-radius: 0.5rem;
+    color: var(--white);
+    font-family: "JetBrainsMono", monospace;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+  }
+
+  blockquote {
+    border-left: 3px solid rgb(229 231 235);
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgb(243 244 246);
+    margin: 1rem 0;
+  }
+  .is-active {
+    color: red;
+  }
+}
