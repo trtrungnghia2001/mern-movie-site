@@ -20,14 +20,13 @@ This movie site allows users to browse and search for movies, view movie details
 * Movie browsing and searching
 * Movie details page with ratings and reviews
 * User favorites and watchlist
-* Admin dashboard for movie management
 
 ## Technologies Used
 
 * Frontend: React, Zustand, Tailwind CSS, Ant design
 * Backend: Node.js, Express, MongoDB
 * Authentication: Passport.js, JWT
-* API: The Movie Database (TMDb) API
+* API: [https://ophim17.cc/api-document](https://ophim17.cc/api-document)
 
 ## Demo
 
