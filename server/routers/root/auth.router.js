@@ -102,14 +102,8 @@ authRouter.post('/signin', async (req, res, next) => {
 })
 authRouter.delete('/signout', async (req, res, next) => {
   try {
-    // clear token from cookie
-    res.clearCookie('access_token')
-    res.clearCookie('refresh_token')
-    res.clearCookie('connect.sid')
-
-    const getRefreshTokenFormCookie = req.cookies.refresh_token
-
     // remove refresh_token from database
+    const getRefreshTokenFormCookie = req.cookies.refresh_token
     await userModel.findOneAndUpdate(
       {
         'tokens.token': getRefreshTokenFormCookie,
@@ -123,6 +117,23 @@ authRouter.delete('/signout', async (req, res, next) => {
       },
       { new: true },
     )
+    // clear token from cookie
+    const isProduction = ENV_CONFIG.NODE_ENV === 'production'
+    res.clearCookie('access_token', {
+      httpOnly: isProduction,
+      sameSite: 'none',
+      secure: true,
+    })
+    res.clearCookie('refresh_token', {
+      httpOnly: isProduction,
+      sameSite: 'none',
+      secure: true,
+    })
+    res.clearCookie('connect.sid', {
+      httpOnly: isProduction,
+      sameSite: 'none',
+      secure: true,
+    })
 
     // return
     return handleResponse(res, {
